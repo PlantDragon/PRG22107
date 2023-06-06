@@ -14,14 +14,16 @@ SOURCES += \
     line.cpp \
     main.cpp \
     mainwindow.cpp \
-    scene.cpp
+    scene.cpp \
+    scenetype.cpp
 
 HEADERS += \
     character.h \
     characterpose.h \
     line.h \
     mainwindow.h \
-    scene.h
+    scene.h \
+    scenetype.h
 
 FORMS += \
     mainwindow.ui
