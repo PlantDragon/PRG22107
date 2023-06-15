@@ -20,7 +20,7 @@ private:
 
 public:
     scene();
-    scene(int p, QWidget *parent, sceneType t, QtPixmap b, line s[], boolean end);
+    scene(int p, sceneType t, QtPixmap b, line s[], boolean end);
 
     void setPosNumber(int n);
     void addLine(line l);
@@ -31,6 +31,8 @@ public:
     line getLine(int n);
     boolean getEnd();
     sceneType getSceneType();
+
+    void showScene(QtWidget *parent);
 };
 
 #endif // SCENE_H

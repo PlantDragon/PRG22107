@@ -7,10 +7,10 @@ class characterPose
 {
 private:
     int position;
-    QPixmap pose;
-    character char;
+    int pose;
+    character c;
 public:
-    characterPose();
+    characterPose(int pos, int pose, character c);
 };
 
 #endif // CHARACTERPOSE_H
