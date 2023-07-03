@@ -10,23 +10,17 @@ CONFIG += c++17
 
 SOURCES += \
     character.cpp \
-    characterpose.cpp \
     line.cpp \
     main.cpp \
-    mainwindow.cpp \
-    scene.cpp \
-    scenetype.cpp
+    scene.cpp
 
 HEADERS += \
     character.h \
-    characterpose.h \
     line.h \
-    mainwindow.h \
-    scene.h \
-    scenetype.h
+    scene.h
 
 FORMS += \
-    mainwindow.ui
+    scene.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -34,4 +28,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    images.qrc
+    ../../PRG22107_231/images.qrc

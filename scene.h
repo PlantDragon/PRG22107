@@ -2,37 +2,34 @@
 #define SCENE_H
 
 #include <QWidget>
-#include <QObject>
+#include "character.h"
 #include "line.h"
 
-class scene : public QWidget
+QT_BEGIN_NAMESPACE
+namespace Ui { class Scene; }
+QT_END_NAMESPACE
+
+class Scene : public QWidget
 {
     Q_OBJECT
-private:
-    int _id;
-    int _posnumber;
-    sceneType _type;
-    QtPixmap _background;
-    //music
-    line _script[];
-    //decision
-    boolean _end;
 
 public:
-    scene();
-    scene(int p, sceneType t, QtPixmap b, line s[], boolean end);
+    Scene(QWidget *parent = nullptr);
+    ~Scene();
 
-    void setPosNumber(int n);
-    void addLine(line l);
-    void setSceneType (sceneType t);
-    void setEnd (boolean end);
-    void setBackgorund(QtPixmap b);
+private slots:
+    void on_nextButton_clicked();
 
-    line getLine(int n);
-    boolean getEnd();
-    sceneType getSceneType();
+private:
+    Ui::Scene *ui;
 
-    void showScene(QtWidget *parent);
+    QPixmap background;
+    QPixmap lineBox;
+    QPixmap char1;
+    QPixmap char2;
+
+    QList<line> script;
+
+    int actualLine;
 };
-
 #endif // SCENE_H

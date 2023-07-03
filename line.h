@@ -1,16 +1,25 @@
 #ifndef LINE_H
 #define LINE_H
 
-#include <string>
-#include "characterpose.h"
+#include <QString>
+#include <QPixmap>
+
+#include "character.h"
 
 class line
 {
-private:
-    string text;
-    characterpose charpose;
 public:
-    line();
+    line(QString l, character ch);
+
+    QString getlineText();
+    character getCharacter();
+    //QPixmap getCharacterImage();
+
+private:
+    QString text;
+    character ch;
+    //QString name;
+    //QPixmap image;
 };
 
 #endif // LINE_H

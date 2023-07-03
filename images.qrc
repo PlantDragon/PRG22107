@@ -1,2 +1,10 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/characters">
+        <file>images/terebi.png</file>
+        <file>images/haruko.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>images/background1.jpg</file>
+        <file>images/dbox.png</file>
+    </qresource>
+</RCC>

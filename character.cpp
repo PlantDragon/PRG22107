@@ -1,43 +1,31 @@
 #include "character.h"
 
-character::character()
-{
-    this->name = NoName;
-    this->images = NULL;
-}
-
-character::character(string name)
+character::character(QString name, QPixmap image)
 {
     this->name = name;
-    this->images = NULL;
+    this->image = image;
+}
+character::character(){
+    this->name = "no name";
+    //this->QPixmap = NULL;
 }
 
-character::character(string name, QPixmap images[3])
+QString character::getName()
+{
+    return this->name;
+}
+
+QPixmap character::getImage()
+{
+    return this->image;
+}
+
+void character::setName(QString name)
 {
     this->name = name;
-    this->images = images;
 }
 
-character::character(string name, QPixmap image)
+void character::setImage(QPixmap image)
 {
-    this->name;
-    for (int i = 0; i <= 3; i++)
-    {
-        this->images[i] = image;
-    }
-}
-
-QPixmap character::getPose(int pose)
-{
-    return images[pose];
-}
-
-string character::getName()
-{
-    return name;
-}
-
-void character::addImage(QPixmap image, int pose)
-{
-    this->images[pose] = image;
+    this->image = image;
 }
